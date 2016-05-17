@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Battleship</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header">Battleship</h1>
+            </div>
+        </div>
+<div class="container">
+        <div class="row ready">
+            <p>Ready!</p>
+        </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 panel panel-default">
+                    <div class="row">
+                        <div class="panel-heading">
+                        <h2>Player</h2>
+
+                        <form class="pull-right">
+                            Target
+                            <input type="text" name="target">
+                            <button type="button" class="btn btn-danger">Fire</button>
+                        </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="panel-body">
+                        <div class="col-md-3">
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-circle" aria-hidden="true"></i> Carrier</li>
+                                <li><i class="fa fa-circle" aria-hidden="true"></i> Battleship</li>
+                                <li><i class="fa fa-circle" aria-hidden="true"></i> Cruiser</li>
+                                <li><i class="fa fa-circle" aria-hidden="true"></i> Submarine</li>
+                                <li><i class="fa fa-circle" aria-hidden="true"></i> Patrol</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-9 panel panel-default">
+                            <div class="row">
+                                <div class="col-xs-1"></div>
+                                <div class="col-xs-1">1</div>
+                                <div class="col-xs-1">2</div>
+                                <div class="col-xs-1">3</div>
+                                <div class="col-xs-1">4</div>
+                                <div class="col-xs-1">5</div>
+                                <div class="col-xs-1">6</div>
+                                <div class="col-xs-1">7</div>
+                                <div class="col-xs-1">8</div>
+                                <div class="col-xs-1">9</div>
+                                <div class="col-xs-1">10</div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-1">A</div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-1">B</div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-1">C</div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-1">D</div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-1">E</div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-1">F</div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-1">G</div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-1">H</div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-1">I</div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-1">J</div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+<div class="col-md-6 panel panel-default">
+                    <div class="row">
+                        <div class="panel-heading">
+                        <h2>Computer</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="panel-body">
+                        <div class="col-md-3">
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-circle" aria-hidden="true"></i> Carrier</li>
+                               <li><i class="fa fa-circle" aria-hidden="true"></i> Battleship</li>
+                               <li><i class="fa fa-circle" aria-hidden="true"></i> Cruiser</li>
+                                <li><i class="fa fa-circle" aria-hidden="true"></i> Submarine</li>
+                                <li><i class="fa fa-circle" aria-hidden="true"></i> Patrol</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-9 panel panel-default">
+                            <div class="row">
+                                <div class="col-xs-1"></div>
+                                <div class="col-xs-1">1</div>
+                                <div class="col-xs-1">2</div>
+                                <div class="col-xs-1">3</div>
+                                <div class="col-xs-1">4</div>
+                                <div class="col-xs-1">5</div>
+                                <div class="col-xs-1">6</div>
+                                <div class="col-xs-1">7</div>
+                                <div class="col-xs-1">8</div>
+                                <div class="col-xs-1">9</div>
+                                <div class="col-xs-1">10</div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-1">A</div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-1">B</div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-1">C</div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-1">D</div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-1">E</div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-1">F</div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-1">G</div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-1">H</div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-1">I</div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-1">J</div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-1"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+    </div>
+    </div>
+</body>
+<style>
+    body  {background-image: url(water.png);
+    background-size:cover;
+    }
+    form {
+        margin-top:-40px;
+    }
+</style>
+</html>
